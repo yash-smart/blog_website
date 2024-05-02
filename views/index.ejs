@@ -8,9 +8,12 @@
 <body>
     <form action="/login" method="POST">
         <input type="text" name="Username" placeholder="Username">
-        <input type="text" name="Password" placeholder="Password">
+        <input type="password" name="Password" placeholder="Password">
         <input type="submit" value="Submit">
     </form>
+    <% if (locals.message) { %>
+        <p style="color: red;"><%= message %></p>
+    <% } %>
     <a href="/register" >Register here!</a>
 </body>
 </html>
